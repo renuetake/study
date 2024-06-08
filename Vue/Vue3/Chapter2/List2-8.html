@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My first Vue app</title>
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <h1>Vue3</h1>
+        <div id="app">
+            <pre>{{ data.map((value, key) => key + ':「' + value + '」').join('\n') }}</pre>
+        </div>
+
+        <script>
+            const data = ['Windows', 'macOS', 'Linux', 'iOS', 'Android']
+            const appdata = {
+                data() {
+                    return {
+                        data: data
+                    }
+                }
+            }
+
+            let app = Vue.createApp(appdata)
+            app.mount('#app')
+        </script>
+    </body>
+
+</html>

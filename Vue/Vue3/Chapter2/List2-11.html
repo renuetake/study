@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My first Vue app</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+
+    <body>
+        <h1 class="bg-secondary text-white display-4 px-3">Vue3</h1>
+        <div id="app" class="container">
+            <p class="text-primary">{{ message }}</p>
+            <p class="text-secondary">{{ message }}</p>
+            <p class="text-success">{{ message }}</p>
+            <p class="text-danger">{{ message }}</p>
+            <p class="text-warning">{{ message }}</p>
+            <p class="text-dark">{{ message }}</p>
+            <p class="text-light">{{ message }}</p>
+            <p class="text-info">{{ message }}</p>
+            <p class="bg-primary">{{ message }}</p>
+            <p class="bg-secondary">{{ message }}</p>
+            <p class="bg-success">{{ message }}</p>
+            <p class="bg-danger">{{ message }}</p>
+            <p class="bg-warning">{{ message }}</p>
+            <p class="bg-info">{{ message }}</p>
+            <p class="bg-dark">{{ message }}</p>
+            <p class="bg-light">{{ message }}</p>
+        </div>
+
+        <script>
+            const appdata = {
+                data() {
+                    return {
+                        message: null
+                    }
+                },
+                mounted() {
+                    this.message = 'This is sample page.'
+                }
+            }
+
+            let app = Vue.createApp(appdata)
+            app.mount('#app')
+        </script>
+    </body>
+</html>
